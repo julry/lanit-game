@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "./static/css/main.77b02728.css",
+    "main.js": "./static/js/main.a96dc956.js",
+    "static/media/FiraSans-Bold.ttf": "./static/media/FiraSans-Bold.b2c1d356b236acbad8ef.ttf",
+    "static/media/FiraSans-SemiBold.ttf": "./static/media/FiraSans-SemiBold.9b44246405e74df4837c.ttf",
+    "static/media/FiraSans-Medium.ttf": "./static/media/FiraSans-Medium.d11d9e14e00fc1a96751.ttf",
+    "static/media/FiraSans-Regular.ttf": "./static/media/FiraSans-Regular.f4eb295ecc2fb842d61c.ttf",
+    "static/media/game1bg.png": "./static/media/game1bg.c7b9db2bc9eadf9875ed.png",
+    "static/media/game2bg.png": "./static/media/game2bg.01006502fb111df39e48.png",
+    "static/media/game3bg.png": "./static/media/game3bg.79ab1d088ca01d6ccd13.png",
+    "static/media/game4bg.png": "./static/media/game4bg.b5ab2211029a9b1b1286.png",
+    "static/media/game4final.png": "./static/media/game4final.7e89b2e9eb35523f3863.png",
+    "static/media/game5bg.png": "./static/media/game5bg.6b9b5f6661883982be3e.png",
+    "static/media/game3final.png": "./static/media/game3final.736b12f898fa604ec2c9.png",
+    "static/media/game1final.png": "./static/media/game1final.97deb249e1979f5a6cc2.png",
+    "static/media/game2final.png": "./static/media/game2final.132373da1fdb47696394.png",
+    "static/media/game5final.png": "./static/media/game5final.21b50dbce5e41c8933c0.png",
+    "static/media/Verdana.ttf": "./static/media/Verdana.06356c47838279a6fe85.ttf",
+    "static/media/Verdana-Bold.ttf": "./static/media/Verdana-Bold.8aec3990e9cd04b52419.ttf",
+    "static/media/gamepic.svg": "./static/media/gamepic.3557c08f7f02133fcbcad5a9b2ba32df.svg",
+    "static/media/game3.svg": "./static/media/game3.162936d019dfb356af86b06a0659f99e.svg",
+    "static/media/game4.svg": "./static/media/game4.065cc2dc0c29e62186be7d77ba2837a1.svg",
+    "static/media/game1.svg": "./static/media/game1.b285fcc495f0e26529f666b243fca621.svg",
+    "static/media/game5.svg": "./static/media/game5.fcb688b14fdad9a322fd886b42117fa3.svg",
+    "static/media/game2.svg": "./static/media/game2.96817869266da0b07f83340e5b58703c.svg",
+    "static/media/logo.svg": "./static/media/logo.c76d17d9740cd3eeb9452e0c1d00a96e.svg",
+    "static/media/intro.svg": "./static/media/intro.8e154eca637eba8bf3b5f525dd82a4a4.svg",
+    "index.html": "./index.html",
+    "static/media/finalbg.svg": "./static/media/finalbg.0a7487751798587db712a409bf6a84e6.svg",
+    "static/media/game2finalbg.svg": "./static/media/game2finalbg.502c6f33125a5a4f28e8c276a97729a2.svg",
+    "static/media/game1finalbg.svg": "./static/media/game1finalbg.e8d457a83ce89c84511194b6ee2e55dd.svg",
+    "static/media/game4finalbg.svg": "./static/media/game4finalbg.b96209444b7d161312b11f3114aaddc8.svg",
+    "static/media/game3finalbg.svg": "./static/media/game3finalbg.32d01c6c9086b3177edfd4eb3e7ad392.svg",
+    "static/media/game5finalbg.svg": "./static/media/game5finalbg.968cf61114ee34b43103b5a7b444b935.svg",
+    "main.77b02728.css.map": "./static/css/main.77b02728.css.map",
+    "main.a96dc956.js.map": "./static/js/main.a96dc956.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77b02728.css",
+    "static/js/main.a96dc956.js"
+  ]
+}
