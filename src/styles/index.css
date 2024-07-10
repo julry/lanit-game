@@ -1,0 +1,33 @@
+@import "fonts.css";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'FiraSans', 'Verdana', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(41, 41, 41, 1);
+}
+
+button {
+  color: white;
+  font-family: 'FiraSans', 'Verdana', sans-serif;
+  font-weight: 700;
+}
+
+#root {
+  height: 100%;
+}
+
+p, span {
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

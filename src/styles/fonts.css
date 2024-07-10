@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'FiraSans';
+    src: local('Fira Sans'), local('FiraSans'),
+    url('../assets/fonts/FiraSans/FiraSans-Bold.ttf') format('truetype'),
+    local('Fira-Sans');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: local('Fira Sans'), local('FiraSans'),
+    url('../assets/fonts/FiraSans/FiraSans-Medium.ttf') format('truetype'),
+    local('Fira-Sans');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: local('Fira Sans'), local('FiraSans'),
+    url('../assets/fonts/FiraSans/FiraSans-Regular.ttf') format('truetype'),
+    local('Fira-Sans');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: local('Fira Sans'), local('FiraSans'),
+    url('../assets/fonts/FiraSans/FiraSans-SemiBold.ttf') format('truetype'),
+    local('Fira-Sans');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: local('Verdana'),
+    url('../assets/fonts/Verdana/Verdana.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: local('Verdana'),
+    url('../assets/fonts/Verdana/Verdana-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
