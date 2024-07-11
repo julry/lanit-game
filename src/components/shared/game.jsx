@@ -2,8 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useProgress } from '../../contexts/ProgressContext';
 import { useSizeRatio } from '../../contexts/SizeRatioContext';
-import { getArray } from '../../utils/getArray';
-import { shuffle } from '../../utils/shuffle';
 import { Button } from './button';
 import { RulesModal } from './rules-modal';
 import { CommonText } from './text';
@@ -122,10 +120,9 @@ const fillCellArray = (id, cellSize, isEmpty, bg) => (
     }
 );
 
-export const Game = ({ isFirstTimeRules, picture, bg, phrases, level }) => {
+export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuzzles }) => {
     const {next} = useProgress();
     const ratio = useSizeRatio();
-    const [cells, setCells] = useState([]);
     const [shownCells, setShownCells] = useState([]);
     const [initialCells, setInitialCells] = useState([]);
     const [finished, setFinished] = useState(false);
@@ -134,14 +131,10 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level }) => {
     useEffect(() => {
         const size = 343 * ratio / CELLS_ROW_AMOUNT;
         const cellsAmount = CELLS_ROW_AMOUNT * CELLS_COLUMN_AMOUNT;
-        const cellsArr = getArray(cellsAmount,
-            (v, i) => fillCellArray(i, size, i === cellsAmount - 1, picture));
-        setCells(() => cellsArr);
-        const shuffled = shuffle(cellsArr.slice(0, cellsAmount - 1));
-        const initial = [...shuffled, cellsArr[cellsAmount - 1]];
+        const initial = initialPuzzles.map((id) => fillCellArray(id, size, id === cellsAmount - 1, picture));
         setShownCells(() => initial);
         setInitialCells(() => initial);
-    }, [ratio, picture]);
+    }, [ratio, picture, initialPuzzles]);
 
     const swapCells = (ind1, ind2, arr) => {
         const newArr = [...arr];
@@ -169,12 +162,12 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level }) => {
             for (i = 0; i < swappedArr.length; i++) {
                 if (i !== swappedArr[i].position) break;
             }
-            if (i === cells.length) {
+            if (i === initialCells.length) {
                 setFinished(true);
                 setTimeout(() => next(), 300);
             }
         }
-    }, [shownCells, setFinished, setShownCells, finished, next, cells]);
+    }, [shownCells, setFinished, setShownCells, finished, next, initialCells]);
 
     return (
         <>
