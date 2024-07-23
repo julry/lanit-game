@@ -8,6 +8,7 @@ import { CommonText } from './text';
 
 const CELLS_COLUMN_AMOUNT = 4;
 const CELLS_ROW_AMOUNT = 4;
+const SKIP_AMOUNT = 10;
 
 const Wrapper = styled.div`
     display: flex;
@@ -100,6 +101,25 @@ const ActionButton = styled(Button)`
     }
 `;
 
+const SkipBtn = styled.button`
+    position: absolute;
+    bottom: ${({$ratio}) => $ratio * 60}px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    outline: none;
+    transition: opacity 0.3s;
+    opacity: ${({$canSkip}) => $canSkip ? 1 : 0};
+    color: #FFFFFF;
+    padding: 0 ${({$ratio}) => $ratio * 4}px ${({$ratio}) => $ratio * 4}px;
+    border-bottom: 2px solid #FFFFFF;
+    background: transparent;
+    font-size: ${({$ratio}) => $ratio * 20}px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Verdana', 'sans-serif';
+`;
+
 const getRowId = (i) => Math.floor(i / CELLS_ROW_AMOUNT);
 const getColId = (i) => i % CELLS_ROW_AMOUNT;
 
@@ -126,6 +146,7 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuz
     const [shownCells, setShownCells] = useState([]);
     const [initialCells, setInitialCells] = useState([]);
     const [finished, setFinished] = useState(false);
+    const [canSkip, setCanSkip] = useState(false);
     const [rulesModal, setRulesModal] = useState({shown: isFirstTimeRules, isFirstTime: isFirstTimeRules});
 
     useEffect(() => {
@@ -162,6 +183,10 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuz
             for (i = 0; i < swappedArr.length; i++) {
                 if (i !== swappedArr[i].position) break;
             }
+            if (i === SKIP_AMOUNT) {
+                setCanSkip(true);
+            }
+
             if (i === initialCells.length) {
                 setFinished(true);
                 setTimeout(() => next(), 300);
@@ -193,6 +218,7 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuz
                         </Cell>
                     ))}
                 </CellsWrapper>
+                <SkipBtn $canSkip={canSkip} onClick={next} $ratio={ratio}>Пропустить</SkipBtn>
             </Wrapper>
             {
                 rulesModal.shown && (
