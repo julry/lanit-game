@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useProgress } from '../../contexts/ProgressContext';
 import { useSizeRatio } from '../../contexts/SizeRatioContext';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 import { Button } from './button';
 import { RulesModal } from './rules-modal';
 import { CommonText } from './text';
@@ -194,6 +195,11 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuz
         }
     }, [shownCells, setFinished, setShownCells, finished, next, initialCells]);
 
+    const handleCloseRules = () => {
+        if (rulesModal.isFirstTime) reachMetrikaGoal('rules');
+
+        setRulesModal({shown: false, isFirstTime: false});
+    }
     return (
         <>
             <Wrapper $bg={bg}>
@@ -223,7 +229,7 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuz
             {
                 rulesModal.shown && (
                     <RulesModal
-                        onClose={() => setRulesModal({shown: false, isFirstTime: false})}
+                        onClose={handleCloseRules}
                         isFirstTime={rulesModal.isFirstTime}
                     />
                 )

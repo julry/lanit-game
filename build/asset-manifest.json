@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.2010ab20.css",
-    "main.js": "./static/js/main.f9240f99.js",
+    "main.js": "./static/js/main.74a2ff85.js",
     "static/media/FiraSans-Bold.ttf": "./static/media/FiraSans-Bold.b2c1d356b236acbad8ef.ttf",
     "static/media/FiraSans-SemiBold.ttf": "./static/media/FiraSans-SemiBold.9b44246405e74df4837c.ttf",
     "static/media/FiraSans-Medium.ttf": "./static/media/FiraSans-Medium.d11d9e14e00fc1a96751.ttf",
@@ -25,8 +25,8 @@
     "static/media/game5.svg": "./static/media/game5.fcb688b14fdad9a322fd886b42117fa3.svg",
     "static/media/game2.svg": "./static/media/game2.96817869266da0b07f83340e5b58703c.svg",
     "static/media/logo.svg": "./static/media/logo.c76d17d9740cd3eeb9452e0c1d00a96e.svg",
-    "static/media/intro.svg": "./static/media/intro.8e154eca637eba8bf3b5f525dd82a4a4.svg",
     "index.html": "./index.html",
+    "static/media/intro.svg": "./static/media/intro.8e154eca637eba8bf3b5f525dd82a4a4.svg",
     "static/media/finalbg.svg": "./static/media/finalbg.0a7487751798587db712a409bf6a84e6.svg",
     "static/media/game2finalbg.svg": "./static/media/game2finalbg.502c6f33125a5a4f28e8c276a97729a2.svg",
     "static/media/game1finalbg.svg": "./static/media/game1finalbg.e8d457a83ce89c84511194b6ee2e55dd.svg",
@@ -34,10 +34,10 @@
     "static/media/game3finalbg.svg": "./static/media/game3finalbg.32d01c6c9086b3177edfd4eb3e7ad392.svg",
     "static/media/game5finalbg.svg": "./static/media/game5finalbg.968cf61114ee34b43103b5a7b444b935.svg",
     "main.2010ab20.css.map": "./static/css/main.2010ab20.css.map",
-    "main.f9240f99.js.map": "./static/js/main.f9240f99.js.map"
+    "main.74a2ff85.js.map": "./static/js/main.74a2ff85.js.map"
   },
   "entrypoints": [
     "static/css/main.2010ab20.css",
-    "static/js/main.f9240f99.js"
+    "static/js/main.74a2ff85.js"
   ]
 }

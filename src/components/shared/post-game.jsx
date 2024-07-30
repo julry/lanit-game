@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useProgress } from "../../contexts/ProgressContext";
 import { useSizeRatio } from "../../contexts/SizeRatioContext";
+import {reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 import { Button } from "./button";
 import { LogoBlock } from "./logo-block";
 
@@ -29,6 +30,7 @@ export const PostGame = ({level, bg, isLast, children}) => {
     const ratio = useSizeRatio();
 
     const handleNext = () => {
+        reachMetrikaGoal(`level${level ? level - 1 : 5}`);
         next();
     }
 

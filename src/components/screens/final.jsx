@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import bg from "../../assets/images/finalbg.svg";
 import { useSizeRatio } from "../../contexts/SizeRatioContext";
+import { reachMetrikaGoal } from "../../utils/reachMetrikaGoal";
 import { Button } from "../shared/button";
 import { LogoBlock } from "../shared/logo-block"
 import { CommonText } from "../shared/text"
@@ -26,6 +27,11 @@ const Content = styled.div`
 export const Final = () => {
     const ratio = useSizeRatio();
 
+    const handleOpenLink = () => {
+        reachMetrikaGoal('calendar');
+        window.open('https://advent.lanit.ru/', '_blank');
+    }
+
     return (
         <Wrapper $ratio={ratio}>
             <LogoBlock>
@@ -42,7 +48,7 @@ export const Final = () => {
                         </b>
                     </CommonText>
 
-                    <Button>Перейти</Button>
+                    <Button onClick={handleOpenLink}>Перейти</Button>
                 </Content>
             </LogoBlock>
         </Wrapper>
