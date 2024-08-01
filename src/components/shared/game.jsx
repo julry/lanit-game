@@ -184,7 +184,8 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuz
             for (i = 0; i < swappedArr.length; i++) {
                 if (i !== swappedArr[i].position) break;
             }
-            if (i === SKIP_AMOUNT) {
+
+            if (i >= SKIP_AMOUNT) {
                 setCanSkip(true);
             }
 
