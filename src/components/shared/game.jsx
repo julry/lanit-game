@@ -224,6 +224,14 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuz
         if (!isAlreadyFinished) setLastPosition(shownCells);
     }
 
+    const handleSkip = () => {
+        next();
+
+        if (isAlreadyFinished) return;
+
+        setLastPosition([]);
+    }
+
     return (
         <>
             <Wrapper $bg={bg}>
@@ -251,7 +259,7 @@ export const Game = ({ isFirstTimeRules, picture, bg, phrases, level, initialPuz
                         </Cell>
                     ))}
                 </CellsWrapper>
-                <SkipBtn $canSkip={canSkip} onClick={() => next()} $ratio={ratio}>Пропустить</SkipBtn>
+                <SkipBtn $canSkip={canSkip} onClick={handleSkip} $ratio={ratio}>Пропустить</SkipBtn>
             </Wrapper>
             {
                 rulesModal.shown && (
