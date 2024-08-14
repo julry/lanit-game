@@ -33,13 +33,20 @@ import game5bg from "../assets/images/game5bg.png";
 import game5final from "../assets/images/game5final.png";
 import game5finalbg from "../assets/images/game5finalbg.svg";
 
+export const GAME1_INDEX = 1;
+export const GAME2_INDEX = 3;
+export const GAME3_INDEX = 5;
+export const GAME4_INDEX = 7;
+export const GAME5_INDEX = 9;
+export const FINAL_INDEX = 11;
+
 export const screens = [
     {
         id: 0,
         component: Intro
     },
     {
-        id: 1,
+        id: GAME1_INDEX,
         component: Game1
     },
     {
@@ -47,7 +54,7 @@ export const screens = [
         component: PostGame1
     },
     {
-        id: 3,
+        id: GAME2_INDEX,
         component: Game2
     },
     {
@@ -55,7 +62,7 @@ export const screens = [
         component: PostGame2
     },
     {
-        id: 5,
+        id: GAME3_INDEX,
         component: Game3
     },
     {
@@ -63,7 +70,7 @@ export const screens = [
         component: PostGame3
     },
     {
-        id: 7,
+        id: GAME4_INDEX,
         component: Game4
     },
     {
@@ -71,7 +78,7 @@ export const screens = [
         component: PostGame4
     },
     {
-        id: 9,
+        id: GAME5_INDEX,
         component: Game5
     },
     {
@@ -79,7 +86,7 @@ export const screens = [
         component: PostGame5
     },
     {
-        id: 11,
+        id: FINAL_INDEX,
         component: Final
     },
 ];

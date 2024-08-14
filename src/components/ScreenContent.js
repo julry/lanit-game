@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 `
 
 export function ScreenContent() {
-    const {screen} = useProgress()
+    const { screen } = useProgress();
     const Screen = useMemo(() => screen?.component, [screen]);
     useImagePreloader(preloadImages);
 
@@ -44,7 +44,7 @@ export function ScreenContent() {
         document.body.addEventListener('touchmove', preventDefault, { passive: false });
         
         return () => document.body.removeEventListener('touchmove', preventDefault);
-    }, [])
+    }, []);
 
     return Screen && (
         <SwitchTransition mode='out-in'>

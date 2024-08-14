@@ -1,9 +1,12 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { useProgress } from "../../contexts/ProgressContext";
 import { useSizeRatio } from "../../contexts/SizeRatioContext";
 import {reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 import { Button } from "./button";
 import { LogoBlock } from "./logo-block";
+import { MenuButton } from "./menu-button";
+import { MenuModal } from "./menu-modal";
 
 const Wrapper = styled.div`
     display: flex;
@@ -25,7 +28,14 @@ const LogoBlockStyled = styled(LogoBlock)`
     padding-right: ${({$ratio}) => $ratio * 17}px; 
 `;
 
+const MenuButtonStyled = styled(MenuButton)`
+    position: absolute;
+    top: ${({$ratio}) => $ratio * 16}px;
+    left: ${({$ratio}) => $ratio * 16}px;
+`;
+
 export const PostGame = ({level, bg, isLast, children}) => {
+    const [isMenu, setIsMenu] = useState(false);
     const {next} = useProgress();
     const ratio = useSizeRatio();
 
@@ -35,15 +45,21 @@ export const PostGame = ({level, bg, isLast, children}) => {
     }
 
     return (
-        <Wrapper $ratio={ratio} $bg={bg}>
-            <div>
-                <LogoBlockStyled $ratio={ratio}>
-                    {children}
-                </LogoBlockStyled>
-                <ButtonStyled $ratio={ratio} onClick={handleNext}>
-                    {isLast ? 'Далее' : `Уровень ${level}`}
-                </ButtonStyled>
-            </div>
-        </Wrapper>
+        <>
+            <Wrapper $ratio={ratio} $bg={bg}>
+                <MenuButtonStyled $ratio={ratio} ratio={ratio} onClick={() => setIsMenu(true)}/>
+                <div>
+                    <LogoBlockStyled $ratio={ratio}>
+                        {children}
+                    </LogoBlockStyled>
+                    <ButtonStyled $ratio={ratio} onClick={handleNext}>
+                        {isLast ? 'Далее' : `Уровень ${level}`}
+                    </ButtonStyled>
+                </div>
+            </Wrapper>
+            {isMenu && (
+                <MenuModal onClose={() => setIsMenu(false)}/>
+            )}
+        </>
     )
 }

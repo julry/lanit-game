@@ -1,8 +1,12 @@
 import { Game } from "../shared/game";
 import pic from "../../assets/images/game4.svg";
 import bg from "../../assets/images/game4bg.png";
+import { useProgress } from "../../contexts/ProgressContext";
+import { GAME4_INDEX } from "../../constants/screens";
 
 export const Game4 = () => {
+    const { lastScreenIndex } = useProgress();
+
     return ( 
         <Game  
             picture={pic} 
@@ -17,6 +21,7 @@ export const Game4 = () => {
             }
             bg={bg}
             level={4}
+            isAlreadyFinished={lastScreenIndex > GAME4_INDEX}
         />
     )
 }
